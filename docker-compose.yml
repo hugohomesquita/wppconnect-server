@@ -5,8 +5,8 @@ services:
     build:
       context: .
     volumes:      
-      - ./config.js:/usr/src/wpp-server/dist/config.js  
-      - ./config.js:/usr/src/wpp-server/config.ts
+      # - ./config.ts:/usr/src/wpp-server/dist/config.ts  
+      - ./config.ts:/usr/src/wpp-server/config.ts
       #- ./config.json:/usr/src/wpp-server/config.json
       #- ./config.json:/usr/src/wpp-server/dist/config.json
       - ./tokens:/usr/src/wpp-server/tokens
