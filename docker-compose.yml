@@ -4,11 +4,11 @@ services:
   wppconnect:
     build:
       context: .
-    volumes:
-      - ./config.ts:/usr/src/wpp-server/config.ts
-      - ./wppconnect_tokens:/usr/src/wpp-server/tokens
+    volumes:      
+      - ./config.js:/usr/src/wpp-server/dist/config.js      
+      #- ./config.json:/usr/src/wpp-server/config.json
+      #- ./config.json:/usr/src/wpp-server/dist/config.json
+      - ./tokens:/usr/src/wpp-server/tokens
+      - ./userDataDir:/usr/src/wpp-server/userDataDir
     ports:
       - "21465:21465"
-
-volumes:
-  wppconnect_tokens: {}      
